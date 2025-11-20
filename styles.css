@@ -1,0 +1,1158 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fefefe;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.groom-name, .bride-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 700;
+    color: #8b5a3c;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.ampersand {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #c9a876;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #8b5a3c;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fdf7f0 0%, #f8f1e6 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.shadow-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: url('https://specially.love/elegant/shadow.png') repeat-x center top;
+    background-size: auto 100px;
+    opacity: 0.3;
+}
+
+.drops-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: url('https://specially.love/elegant/drops2.png') repeat-x center top;
+    background-size: auto 150px;
+    opacity: 0.4;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 10;
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+.cover-flowers {
+    height: 120px;
+    background: url('https://specially.love/elegant/flowers1-cover.png') no-repeat center;
+    background-size: contain;
+    margin: 2rem auto;
+}
+
+.cover-flowers.bottom {
+    transform: rotate(180deg);
+}
+
+.names-container {
+    margin: 3rem 0;
+}
+
+.announcement {
+    margin-top: 4rem;
+}
+
+.announcement p {
+    font-size: 1.5rem;
+    color: #8b5a3c;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.click-button {
+    background: linear-gradient(135deg, #c9a876 0%, #b8956b 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    box-shadow: 0 8px 25px rgba(201, 168, 118, 0.3);
+    transition: all 0.3s ease;
+}
+
+.click-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(201, 168, 118, 0.4);
+}
+
+/* Photo Reveal Section */
+.photo-reveal {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f1e6 0%, #f2e8d5 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.photo-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.couple-photo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    margin-bottom: 3rem;
+}
+
+.wedding-announcement {
+    text-align: center;
+    max-width: 800px;
+}
+
+.couple-names {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: #8b5a3c;
+    margin-bottom: 1rem;
+}
+
+.heart-icon {
+    width: 60px;
+    height: 60px;
+    background: url('https://specially.love/elegant/heart.png') no-repeat center;
+    background-size: contain;
+    margin: 1rem auto;
+}
+
+.wedding-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #8b5a3c;
+    margin-bottom: 1rem;
+}
+
+.wedding-date {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #c9a876;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.flower-decoration-1, .flower-decoration-2, .flower-decoration-3, .flower-decoration-4 {
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 2rem auto;
+}
+
+.flower-decoration-1 {
+    background-image: url('https://specially.love/elegant/flower-dec.png');
+}
+
+.flower-decoration-2 {
+    background-image: url('https://specially.love/elegant/flower-dec2.png');
+}
+
+.flower-decoration-3 {
+    background-image: url('https://specially.love/elegant/flower-dec3.png');
+}
+
+.wedding-quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #8b5a3c;
+    margin: 2rem 0;
+}
+
+/* Event Sections */
+.event-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #fefefe 0%, #f8f1e6 100%);
+    position: relative;
+}
+
+.event-section:nth-child(even) {
+    background: linear-gradient(135deg, #f8f1e6 0%, #f2e8d5 100%);
+}
+
+.event-details {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.venue-name {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #8b5a3c;
+    margin-bottom: 1rem;
+}
+
+.event-time {
+    font-size: 1.3rem;
+    color: #c9a876;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.venue-address {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.map-button {
+    background: transparent;
+    color: #8b5a3c;
+    border: 2px solid #8b5a3c;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.map-button:hover {
+    background: #8b5a3c;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 90, 60, 0.3);
+}
+
+/* Dress Code Section */
+.dress-code-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f2e8d5 0%, #eadcc4 100%);
+    position: relative;
+}
+
+.dress-code-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.dress-code-type {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #8b5a3c;
+    margin-bottom: 1.5rem;
+}
+
+.dress-code-note {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.dress-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+.suit-icon, .dress-icon {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.suit-icon {
+    background-image: url('https://specially.love/elegant/suit.png');
+}
+
+.dress-icon {
+    background-image: url('https://specially.love/elegant/dress.png');
+}
+
+.witness-message {
+    font-size: 1.1rem;
+    color: #8b5a3c;
+    font-style: italic;
+    margin-top: 3rem;
+}
+
+/* RSVP Section */
+.rsvp-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #fefefe 0%, #f8f1e6 100%);
+    position: relative;
+}
+
+.section-subtitle {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #c9a876;
+    margin-bottom: 3rem;
+}
+
+.rsvp-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.assist-icon {
+    width: 100px;
+    height: 100px;
+    background: url('https://specially.love/elegant/assist.png') no-repeat center;
+    background-size: contain;
+    margin: 2rem auto;
+}
+
+.rsvp-button {
+    background: linear-gradient(135deg, #c9a876 0%, #b8956b 100%);
+    color: white;
+    border: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    box-shadow: 0 10px 30px rgba(201, 168, 118, 0.3);
+    transition: all 0.3s ease;
+}
+
+.rsvp-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(201, 168, 118, 0.4);
+}
+
+/* Accommodations Section */
+.accommodations-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f1e6 0%, #f2e8d5 100%);
+}
+
+.accommodations-intro {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hotel-carousel {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hotel-item {
+    display: none;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.hotel-item.active {
+    display: block;
+}
+
+.hotel-name {
+    font-size: 1.5rem;
+    color: #8b5a3c;
+    margin-bottom: 1rem;
+}
+
+.hotel-phone {
+    font-size: 1.2rem;
+    color: #c9a876;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.hotel-map-button {
+    background: transparent;
+    color: #8b5a3c;
+    border: 2px solid #8b5a3c;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.hotel-map-button:hover {
+    background: #8b5a3c;
+    color: white;
+}
+
+.hotel-key-icon {
+    width: 20px;
+    height: 20px;
+    background: url('https://specially.love/elegant/hotelkey.png') no-repeat center;
+    background-size: contain;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.carousel-prev, .carousel-next, .gallery-prev, .gallery-next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #c9a876;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-prev:hover, .carousel-next:hover, .gallery-prev:hover, .gallery-next:hover {
+    background: #8b5a3c;
+    transform: scale(1.1);
+}
+
+/* Bus Section */
+.bus-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #fefefe 0%, #f8f1e6 100%);
+}
+
+.bus-intro {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bus-info {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bus-direction {
+    font-size: 1.8rem;
+    color: #8b5a3c;
+    margin-bottom: 1rem;
+}
+
+.bus-location, .bus-time {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.bus-map-button {
+    background: transparent;
+    color: #8b5a3c;
+    border: 2px solid #8b5a3c;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.bus-map-button:hover {
+    background: #8b5a3c;
+    color: white;
+}
+
+.bus-icon {
+    width: 20px;
+    height: 20px;
+    background: url('https://specially.love/elegant/busalt.png') no-repeat center;
+    background-size: contain;
+}
+
+/* Itinerary Section */
+.itinerary-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f1e6 0%, #f2e8d5 100%);
+}
+
+.flower-quote-decoration {
+    height: 80px;
+    background: url('https://specially.love/elegant/flower-quote2.png') no-repeat center;
+    background-size: contain;
+    margin: 2rem auto;
+}
+
+.timeline {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-time {
+    font-size: 1.3rem;
+    color: #c9a876;
+    font-weight: 600;
+}
+
+.timeline-event {
+    font-size: 1.2rem;
+    color: #8b5a3c;
+    font-weight: 500;
+}
+
+/* Photo Gallery */
+.photo-gallery {
+    margin-top: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-carousel {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-image.active {
+    display: block;
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Gift Section */
+.gift-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #fefefe 0%, #f8f1e6 100%);
+    position: relative;
+}
+
+.shadow-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: url('https://specially.love/elegant/shadow.png') repeat-x center;
+    background-size: auto 100px;
+    opacity: 0.3;
+}
+
+.gift-message {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bank-info {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.account-holder {
+    font-size: 1.3rem;
+    color: #8b5a3c;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.account-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f1e6;
+    border-radius: 10px;
+}
+
+.copy-icon {
+    width: 24px;
+    height: 24px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23c9a876"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.copy-icon:hover {
+    transform: scale(1.2);
+}
+
+.account-text, .code-text {
+    font-family: 'Monaco', monospace;
+    font-size: 1.1rem;
+    color: #8b5a3c;
+}
+
+/* Photo Album Section */
+.photo-album-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f1e6 0%, #f2e8d5 100%);
+    position: relative;
+}
+
+.album-message {
+    font-size: 1.3rem;
+    color: #8b5a3c;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.photo-qr-container {
+    max-width: 600px;
+    margin: 0 auto 4rem;
+}
+
+.photo-qr-icon {
+    width: 80px;
+    height: 80px;
+    background: url('https://specially.love/elegant/photoqr.png') no-repeat center;
+    background-size: contain;
+    margin: 2rem auto;
+}
+
+.qr-instructions {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.qr-code:hover {
+    transform: scale(1.05);
+}
+
+.album-code {
+    margin-top: 2rem;
+}
+
+.album-code p {
+    font-size: 1.1rem;
+    color: #8b5a3c;
+    margin-bottom: 1rem;
+}
+
+.code-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.album-photo {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    margin-top: 4rem;
+}
+
+/* Countdown Section */
+.countdown-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #fefefe 0%, #f8f1e6 100%);
+    position: relative;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+}
+
+.countdown-number {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #8b5a3c;
+    font-family: 'Playfair Display', serif;
+}
+
+.countdown-label {
+    font-size: 1rem;
+    color: #c9a876;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.bottom-decoration {
+    height: 100px;
+    background: url('https://specially.love/elegant/dec-bot.png') no-repeat center;
+    background-size: contain;
+    margin: 3rem auto 0;
+}
+
+/* Placeholder Images */
+.placeholder-image {
+    background: linear-gradient(135deg, #f8f1e6 0%, #eadcc4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b5a3c;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.placeholder-image::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.placeholder-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="20" cy="20" r="2" fill="%23c9a876" opacity="0.3"/><circle cx="80" cy="40" r="1.5" fill="%238b5a3c" opacity="0.2"/><circle cx="50" cy="80" r="1" fill="%23b8956b" opacity="0.4"/><circle cx="10" cy="60" r="1.2" fill="%23c9a876" opacity="0.3"/><circle cx="90" cy="10" r="0.8" fill="%238b5a3c" opacity="0.2"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+/* Enhanced placeholder for gallery images */
+.gallery-image {
+    background: linear-gradient(135deg, #c9a876 0%, #8b5a3c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.gallery-image:nth-child(1)::before {
+    content: 'Foto de la Pareja';
+}
+
+.gallery-image:nth-child(2)::before {
+    content: 'Momento Romántico';
+}
+
+.gallery-image:nth-child(3)::before {
+    content: 'Celebración';
+}
+
+.gallery-image:nth-child(4)::before {
+    content: 'Familia y Amigos';
+}
+
+/* QR Code Placeholder */
+.qr-code {
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.qr-code::before {
+    content: 'QR CODE\APLACEHOOLDER';
+    white-space: pre-line;
+}
+
+/* Album Photo Placeholder */
+.album-photo {
+    background: linear-gradient(135deg, #c9a876 0%, #8b5a3c 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    text-align: center;
+}
+
+.album-photo::before {
+    content: 'Wedding Album Photo';
+}
+
+/* Enhanced decorative elements with CSS fallbacks */
+.suit-icon, .dress-icon {
+    background-color: #8b5a3c;
+    border-radius: 50%;
+    position: relative;
+}
+
+.suit-icon::before {
+    content: '👔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+.dress-icon::before {
+    content: '👗';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+/* Enhanced heart icon */
+.heart-icon {
+    background-color: #c9a876;
+    border-radius: 50%;
+    position: relative;
+}
+
+.heart-icon::before {
+    content: '💕';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
+/* Enhanced assist icon */
+.assist-icon {
+    background-color: #8b5a3c;
+    border-radius: 15px;
+    position: relative;
+}
+
+.assist-icon::before {
+    content: '✉️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+
+/* Enhanced photo QR icon */
+.photo-qr-icon {
+    background-color: #c9a876;
+    border-radius: 15px;
+    position: relative;
+}
+
+.photo-qr-icon::before {
+    content: '📸';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+/* Enhanced decorative flowers with CSS patterns */
+.flower-decoration-1, .flower-decoration-2, .flower-decoration-3, .flower-decoration-4 {
+    position: relative;
+}
+
+.flower-decoration-1::before {
+    content: '🌸 ✨ 🌸';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+}
+
+.flower-decoration-2::before {
+    content: '🌹 💐 🌹';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+}
+
+.flower-decoration-3::before {
+    content: '🌺 🌿 🌺';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+}
+
+.flower-quote-decoration::before {
+    content: '🌷 ♥ 🌷';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    letter-spacing: 1rem;
+}
+
+.bottom-decoration::before {
+    content: '🌸 🌹 🌺 🌻 🌼 🌷';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+}
+
+/* Enhanced cover flowers */
+.cover-flowers {
+    position: relative;
+}
+
+.cover-flowers::before {
+    content: '🌸 🌹 🌺 🌻 🌷';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+}
+
+/* Hotel and bus icons */
+.hotel-key-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #8b5a3c;
+    border-radius: 3px;
+    position: relative;
+}
+
+.hotel-key-icon::before {
+    content: '🔑';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+}
+
+.bus-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #8b5a3c;
+    border-radius: 3px;
+    position: relative;
+}
+
+.bus-icon::before {
+    content: '🚌';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dress-icons {
+        gap: 2rem;
+    }
+    
+    .suit-icon, .dress-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .countdown-timer {
+        gap: 1rem;
+    }
+    
+    .countdown-item {
+        padding: 1.5rem 1rem;
+        min-width: 100px;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .account-number, .code-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .placeholder-image {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content, .event-details, .dress-code-content, .rsvp-content {
+        padding: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .groom-name, .bride-name {
+        font-size: 3rem;
+    }
+    
+    .ampersand {
+        font-size: 2rem;
+    }
+    
+    .placeholder-image {
+        font-size: 1rem;
+    }
+    
+    .cover-flowers::before {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+    }
+}
