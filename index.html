@@ -169,30 +169,19 @@
             </div>
         </div>
 
-        <!-- Photo Gallery with Swiper -->
-        <section class="gallery-section">
-            <h2 class="gallery-title">Momentos</h2>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Momento especial 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1511285560982-1356c11d4606?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Momento especial 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc330e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Momento especial 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Momento especial 4">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Momento especial 5">
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
+        <!-- Photo Gallery -->
+        <div class="photo-gallery">
+            <div class="gallery-carousel">
+                <div class="gallery-image active"></div>
+                <div class="gallery-image"></div>
+                <div class="gallery-image"></div>
+                <div class="gallery-image"></div>
             </div>
-        </section>
+            <div class="gallery-controls">
+                <button class="gallery-prev">‹</button>
+                <button class="gallery-next">›</button>
+            </div>
+        </div>
     </section>
 
     <!-- Gift Section -->
@@ -212,32 +201,17 @@
         </div>
     </section>
 
-    <!-- Photo Album Section -->
-    <section class="photo-album-section">
-        <h2 class="section-title">Álbum de fotos</h2>
-        <div class="drops-decoration"></div>
-        
-        <p class="album-message">¡Ayúdanos a inmortalizar cada momento!</p>
-        
-        <div class="photo-qr-container">
-            <div class="photo-qr-icon"></div>
-            <p class="qr-instructions">Escanea el siguiente QR o haz clic en él y comparte las fotos que tomes durante la boda. ¡Nos hará muchísima ilusión verlas!</p>
-            
-            <a href="https://www.wedshoots.com/" target="_blank" class="qr-link">
-                <div class="qr-code"></div>
-            </a>
-            
-            <div class="album-code">
-                <p>Código del álbum</p>
-                <div class="code-container">
-                    <span class="copy-icon" onclick="copyToClipboard('BODA-M&C25')"></span>
-                    <span class="code-text">BODA-M&C25</span>
-                </div>
+    <!-- Photo Album Section with Swiper Gallery -->
+    <section class="gallery-section">
+        <h2 class="gallery-title">Momentos</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="1"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1511285560982-1356c11d4606?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="2"></div>
+                <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1520854221256-17451cc330e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="3"></div>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
-        
-        <div class="album-photo"></div>
-        <div class="shadow-decoration"></div>
     </section>
 
     <!-- Countdown Section -->
