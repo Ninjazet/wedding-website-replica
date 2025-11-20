@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCarousels();
     initializeCopyFunctionality();
     initializeScrollAnimations();
+    initializeSwiper();
 });
 
 // Photo Reveal Animation
@@ -378,3 +379,77 @@ window.addEventListener('load', function() {
     `;
     document.head.appendChild(loadingStyle);
 });
+
+// Initialize Swiper
+function initializeSwiper() {
+    // Check if Swiper is loaded
+    if (typeof Swiper === 'undefined') {
+        console.error('Swiper not loaded');
+        return;
+    }
+    
+    const swiper = new Swiper('.mySwiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        speed: 600,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                coverflowEffect: {
+                    rotate: 30,
+                    stretch: 10,
+                    depth: 60,
+                    modifier: 1,
+                }
+            },
+            480: {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                coverflowEffect: {
+                    rotate: 40,
+                    stretch: 0,
+                    depth: 80,
+                    modifier: 1,
+                }
+            },
+            768: {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                }
+            }
+        }
+    });
+    
+    // Add animation when slides change
+    swiper.on('slideChange', function() {
+        // Add a subtle fade effect to active slide
+        const activeSlide = document.querySelector('.swiper-slide-active img');
+        if (activeSlide) {
+            activeSlide.style.transform = 'scale(1)';
+        }
+    });
+}
