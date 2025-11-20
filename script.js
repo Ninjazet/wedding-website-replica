@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCarousels();
     initializeCopyFunctionality();
     initializeScrollAnimations();
+    initializeSwiper();
 });
 
 // Photo Reveal Animation
@@ -378,3 +379,24 @@ window.addEventListener('load', function() {
     `;
     document.head.appendChild(loadingStyle);
 });
+
+// Initialize Swiper (simple configuration as requested)
+function initializeSwiper() {
+    // Check if Swiper is loaded
+    if (typeof Swiper === 'undefined') {
+        console.error('Swiper not loaded');
+        return;
+    }
+    
+    const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+    });
+}
