@@ -6,6 +6,8 @@
     <title>Manuel & Carmen</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
     <!-- Hero Section -->
@@ -167,19 +169,30 @@
             </div>
         </div>
 
-        <!-- Photo Gallery -->
-        <div class="photo-gallery">
-            <div class="gallery-carousel">
-                <div class="gallery-image active"></div>
-                <div class="gallery-image"></div>
-                <div class="gallery-image"></div>
-                <div class="gallery-image"></div>
+        <!-- Photo Gallery with Swiper -->
+        <section class="gallery-section">
+            <h2 class="gallery-title">Momentos</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Momento especial 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1511285560982-1356c11d4606?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Momento especial 2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc330e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Momento especial 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Momento especial 4">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Momento especial 5">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="gallery-controls">
-                <button class="gallery-prev">‹</button>
-                <button class="gallery-next">›</button>
-            </div>
-        </div>
+        </section>
     </section>
 
     <!-- Gift Section -->
@@ -253,6 +266,8 @@
         <div class="bottom-decoration"></div>
     </section>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

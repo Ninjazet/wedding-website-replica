@@ -1,122 +1,132 @@
-# Wedding Invitation Website - Manuel & Carmen
+# Manuel & Carmen - Wedding Invitation Website
 
-This is a 90% replica of an elegant wedding invitation website template, designed with a sophisticated and romantic aesthetic.
+Una réplica elegante de invitación de boda inspirada en [specially.love/demo-elegant](https://specially.love/demo-elegant).
 
-## Features
+## 🌸 Características
 
-✨ **Elegant Design**
-- Beautiful typography with Dancing Script and Playfair Display fonts
-- Warm color palette with browns, golds, and cream tones
-- CSS-generated decorative elements with emoji icons
-- Smooth animations and transitions
+- **Diseño Responsivo**: Adaptado para dispositivos móviles y escritorio
+- **Animaciones Suaves**: Transiciones elegantes y scroll animations
+- **Cuenta Regresiva**: Timer en tiempo real hasta el día de la boda (19 de Mayo, 2026)
+- **Carruseles Interactivos**: Galería de fotos y hoteles recomendados
+- **Funcionalidad de Copiado**: Números de cuenta e información para copiar fácilmente
+- **Iconografía Rica**: Emojis y elementos decorativos que evocan romance y eleganza
 
-🎯 **Interactive Elements**
-- Real-time countdown timer to the wedding date (May 19, 2026)
-- Photo gallery carousel with touch/swipe support
-- Hotel accommodations carousel
-- Copy-to-clipboard functionality for bank account and album code
-- Smooth scrolling and reveal animations
-- Click-to-reveal photo section
+## 🎨 Paleta de Colores
 
-📱 **Responsive Design**
-- Mobile-first approach
-- Flexible layouts that adapt to all screen sizes
-- Touch-friendly interface for mobile devices
+- **Primario**: `#8b5a3c` (Marrón cálido)
+- **Secundario**: `#c9a876` (Dorado suave)
+- **Fondo**: `#fdf7f0` a `#f8f1e6` (Gradientes crema)
+- **Acentos**: `#f2e8d5`, `#eadcc4` (Tonos beige)
 
-## Sections Included
+## 🚀 Tecnologías Utilizadas
 
-1. **Hero Section** - Names announcement with decorative elements
-2. **Photo Reveal** - Interactive photo reveal with wedding announcement
-3. **Ceremony Details** - Location and time with map links
-4. **Celebration Details** - Reception venue information
-5. **Dress Code** - Formal attire guidelines with visual icons
-6. **RSVP** - Attendance confirmation section
-7. **Accommodations** - Hotel recommendations carousel
-8. **Transportation** - Bus service information
-9. **Itinerary** - Timeline of wedding day events
-10. **Photo Gallery** - Image carousel for wedding photos
-11. **Gift Information** - Bank account details with copy functionality
-12. **Photo Album** - QR code for photo sharing
-13. **Countdown Timer** - Real-time countdown to the wedding
+- **HTML5**: Estructura semántica y accesible
+- **CSS3**: 
+  - Flexbox y Grid para layouts
+  - Custom properties (variables CSS)
+  - Gradientes y sombras avanzadas
+  - Animaciones con keyframes
+  - Media queries para responsive design
+- **JavaScript ES6+**:
+  - Intersection Observer API para animaciones de scroll
+  - Manipulación del DOM
+  - Temporizadores y carruseles
+  - Clipboard API para funcionalidad de copiado
 
-## Technical Implementation
+## 📱 Responsive Design
 
-- **HTML5** - Semantic markup structure
-- **CSS3** - Modern styling with flexbox, grid, and animations
-- **Vanilla JavaScript** - No dependencies, pure JavaScript functionality
-- **Google Fonts** - Dancing Script, Playfair Display, and Lato
-- **Responsive Design** - Works on all devices
+El sitio está optimizado para:
+- **Desktop**: 1920px y superiores
+- **Tablet**: 768px - 1919px
+- **Mobile**: 320px - 767px
 
-## Browser Compatibility
+### Breakpoints Principales:
+- `@media (max-width: 768px)`: Tablets y pantallas medianas
+- `@media (max-width: 480px)`: Móviles pequeños
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers
+## 🎯 Funcionalidades Interactivas
 
-## Setup
+### 1. Hero Section con Reveal
+- Botón "¡Haz clic!" que revela la sección de fotos con animación suave
+- Scroll automático y fade-in effect
 
-1. Clone the repository
-2. Open `index.html` in your web browser
-3. No build process required - it's ready to use!
+### 2. Countdown Timer
+- Cuenta regresiva en tiempo real hasta `2026-05-19T18:00:00`
+- Actualización cada segundo
+- Formato días, horas, minutos, segundos
 
-## Customization
+### 3. Carruseles
+- **Hoteles**: Auto-avance cada 5 segundos con controles manuales
+- **Galería**: Auto-avance cada 4 segundos con soporte para gestos táctiles
 
-To customize this template for your own wedding:
+### 4. Copy to Clipboard
+- Número de cuenta bancaria
+- Código del álbum fotográfico
+- Notificación visual de confirmación
 
-1. **Update Names**: Change "Manuel" and "Carmen" throughout the HTML
-2. **Update Date**: Modify the wedding date in `script.js` (line 45)
-3. **Update Venues**: Change ceremony and reception locations
-4. **Update Contact Info**: Modify phone numbers and bank account details
-5. **Replace Images**: Add your own wedding photos in place of the placeholder divs
-6. **Update Colors**: Modify the CSS color variables for your theme
+### 5. Enlaces a Mapas
+- Google Maps integration para todas las ubicaciones
+- Aperturas en nueva pestaña
 
-## File Structure
+## 🎨 Elementos Visuales
+
+### Decoraciones CSS
+- **Flores**: Emojis con spacing personalizado (`🌸 🌹 🌺 🌻 🌷`)
+- **Íconos temáticos**: Corazones (`💕`), vestimenta (`👔 👗`), cámara (`📸`)
+- **Efectos de sombra**: Overlays sutiles para profundidad
+- **Gradientes**: Múltiples combinaciones para crear calidez visual
+
+### Tipografía
+- **Headlines**: `Dancing Script` (cursive, elegante)
+- **Títulos**: `Playfair Display` (serif, clásico)
+- **Texto**: `Lato` (sans-serif, legible)
+
+## 🏗️ Estructura del Proyecto
 
 ```
-├── index.html          # Main HTML file
-├── styles.css          # All CSS styles and responsive design
-├── script.js           # JavaScript functionality
-├── assets/
-│   └── placeholder.html # Placeholder image examples
-└── README.md          # This file
+/
+├── index.html          # Página principal
+├── styles.css          # Todos los estilos CSS
+├── script.js          # Funcionalidad JavaScript
+├── assets/            # Recursos y placeholders
+│   └── placeholder.html
+└── README.md          # Este archivo
 ```
 
-## JavaScript Features
+## 🎭 Secciones del Sitio
 
-- **Countdown Timer**: Real-time calculation to wedding date
-- **Image Carousels**: Auto-advancing and manual navigation
-- **Copy Functionality**: One-click copy for account numbers
-- **Scroll Animations**: Intersection Observer for smooth reveals
-- **Touch Support**: Swipe gestures for mobile galleries
+1. **Hero** - Presentación inicial con nombres de los novios
+2. **Photo Reveal** - Foto principal con anuncio de boda
+3. **Ceremonia** - Detalles del evento religioso
+4. **Celebración** - Información del banquete
+5. **Dress Code** - Código de vestimenta
+6. **RSVP** - Confirmación de asistencia
+7. **Alojamientos** - Hoteles recomendados
+8. **Autobús** - Servicio de transporte
+9. **Itinerario** - Cronograma del día con galería
+10. **Regalo** - Información bancaria
+11. **Álbum** - QR para compartir fotos
+12. **Countdown** - Cuenta regresiva final
 
-## CSS Features
+## 🔧 Instalación y Uso
 
-- **CSS Grid & Flexbox**: Modern layout techniques
-- **Custom Properties**: Easy color and spacing customization
-- **Keyframe Animations**: Smooth transitions and effects
-- **Media Queries**: Responsive breakpoints
-- **Pseudo-elements**: Decorative icons and patterns
+1. Clone el repositorio
+2. Abra `index.html` en su navegador
+3. ¡Disfrute de la experiencia!
 
-## Performance
+No se requiere servidor web ni compilación - es un proyecto HTML/CSS/JS puro.
 
-- Optimized images and assets
-- Minimal JavaScript footprint
-- CSS animations for smooth performance
-- Fast loading times
+## 🌟 Créditos
 
-## License
+- **Inspiración**: [Specially.love Demo Elegant](https://specially.love/demo-elegant)
+- **Desarrollo**: Réplica creada con autorización para fines de aprendizaje
+- **Fonts**: Google Fonts (Dancing Script, Playfair Display, Lato)
+- **Iconos**: Emojis nativos del sistema
 
-This is a replica created for testing purposes with permission from the original site owners. Please respect copyright when using this template.
+## 📄 Licencia
 
-## Credits
-
-- Original design inspiration: specially.love
-- Fonts: Google Fonts
-- Icons: Unicode emoji characters
-- Implementation: Droid AI Assistant
+Este proyecto es una réplica educativa creada con permiso de los propietarios originales.
 
 ---
 
-Made with ❤️ for Manuel & Carmen's special day!
+*"Todos los días pueden ser el comienzo de algo nuevo"* ✨
